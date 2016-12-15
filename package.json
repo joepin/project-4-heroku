@@ -19,7 +19,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/Team-CodeX/project-3.git"
+    "url": "git+ssh://git@github.com:joepin/project-4-heroku.git"
   },
   "author": "Joey Pinhas",
   "license": "MIT",
