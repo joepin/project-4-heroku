@@ -93,6 +93,17 @@ function deleteServerURL(req, res, next) {
   .catch(err => next(err));
 }
 
+function unregisterServer(req, res, next) {
+  const uuid = req.body.uuid;
+  const query = `DELETE FROM server WHERE server_uuid = $1; DELETE FROM server_uuid_url WHERE server_uuid = $1;`;
+  const values = [uuid];
+
+  db.none(query, values)
+  .then(() => res.data = 'success')
+  .then(() => next())
+  .catch(err => next(err));
+}
+
 module.exports = {
   getUserData,
   checkIfServerIsRegistered,
@@ -101,4 +112,5 @@ module.exports = {
   prepareResponse,
   saveServerURL,
   deleteServerURL,
+  unregisterServer,
 }

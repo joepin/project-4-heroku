@@ -10,6 +10,9 @@ function sendAsJSON(req, res, next) {
 router.route('/register')
   .post(login, serverModel.getUserData, serverModel.checkIfServerIsRegistered, serverModel.generateUUID, serverModel.registerServer, serverModel.prepareResponse, sendAsJSON);
 
+router.route('/unregister')
+  .post(serverModel.unregisterServer, sendAsJSON);
+
 router.route('/start')
   .get(serverModel.saveServerURL, sendAsJSON);
 
