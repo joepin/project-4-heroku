@@ -1,0 +1,24 @@
+.main-container {
+  height: 75%;
+  width: 75%;
+  background: yellow;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.input-container {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 2vh 0;
+}
+
+.submit-button {
+  border: none;
+  margin-top: 10vh;
+  padding: 3vh 3vw;
+  font-size: calc(1vh + 1vw);
+  border-radius: 50%;
+}
